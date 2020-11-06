@@ -65,7 +65,7 @@ class Todo {
             }
             value -= 0.1;
             target.style.opacity = value;
-        }, 50);
+        }, 10);
     }
 
     deleteItem(target){
