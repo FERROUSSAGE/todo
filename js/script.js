@@ -112,9 +112,11 @@ class Todo {
 
             const target = event.target;
             if(target.matches('.todo-remove')){
-                this.animate(target.parentNode.parentNode, this.deleteItem)
+                target.disabled = true;
+                this.animate(target.parentNode.parentNode, this.deleteItem);
             }
             if(target.matches('.todo-complete')){
+                target.disabled = true;
                 this.animate(target.parentNode.parentNode, this.completedItem);
             }
             if(target.matches('.todo-edit')){
